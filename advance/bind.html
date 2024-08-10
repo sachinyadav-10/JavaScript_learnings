@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+    <script>
+        class React{
+            constructor(){
+                this.lib="React";
+                this.server="https://localhost:3000"
+                // requirement 
+                document.querySelector('button').addEventListener('click',this.handelClick.bind(this)) // this.handelClick send the refrence of the button 
+            } 
+            handelClick(){
+                console.log("button toh click ho gyaa");
+                console.log(this.server); //we can acess server prop of above class becouse of the bind this send the refrence of the that who called handelClick(here it )is button and bind(this) send the props of that class where it is called
+            }
+        }
+        const reactInstance = new React();
+    </script>
+</body>
+</html>  
